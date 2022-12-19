@@ -30,3 +30,4 @@ while stillcalculating == True:
         num1 = int(input('what are you rooting '))
         num2 = int(input('whats the root (i.e. if you want a cube root put 3, if you want a 4th root, put 4)'))
         print(num1**(1/num2))
+ 
