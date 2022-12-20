@@ -14,5 +14,3 @@ when typing in the calculator, type in lowercase
 3. square - actually a misnomer, it raises a number given to a power given
 4. root - opposite of square, same inputs
 
-
-

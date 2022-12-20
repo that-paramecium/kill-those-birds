@@ -1,4 +1,13 @@
+from functions.py import *
+from rpsTEST.py import *
+
+
 while stillcalculating == True:
+     resp = input('wanna play rock paper scissors?')
+     if resp == 'y':
+         rockPaperScissors()
+     elif resp != 'n' and resp != 'y':
+         raise InputError
      whichCalculate = input('What should I calculate (arithmetic, factoring, gcf, roots, squares ') 
      if whichCalculate == 'factoring':
           num1 = int(input('what first num ')) 

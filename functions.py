@@ -1,5 +1,14 @@
-#-------------------------------------function defenitions ------------------------------------------
+#------------------------------function/class defenitions -----------------------------------
 
+
+
+#define the error messages used in all files
+class MoveError(Exception):
+    pass
+class ResultError(Exception):
+    pass
+class InputError(Exception):
+    pass
 
 #number simplifier (fractions)
 def simplify_fraction(numer, denom):
