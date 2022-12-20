@@ -27,14 +27,15 @@ def rockPaperScissors():
             result = ','.join(resultList)
         if result in ties:
             print("It's a tie!")
-            exitCheck()
+            break
         elif result in userWins:
             print("You won with your {} against my {}".format(userMove,aiMove))
-            exitCheck()
+            contBool = False
         elif result in aiWins:
             print("You lost with my {} against your {}".format(aiMove, userMove))
-            exitCheck()
+            contBool = False
         else:
             raise ResultError
+    continue
     file1 = open("highscores.txt", "w") 
     file1.write(result)
