@@ -13,24 +13,24 @@ class InputError(Exception):
 #number simplifier (fractions)
 def simplify_fraction(numer, denom):
 
-     '''
-     Simplifys a fraction
+    '''
+    Simplifys a fraction
 
-     Args:
-     numer - numerater - integer
-     denom - denomenator - integer
-     
-     returns the simplified fraction
-     '''
-     if denom == 0:
+    Args:
+    numer - numerater - integer
+    denom - denomenator - integer
+    
+    returns the simplified fraction
+    '''
+    if denom == 0:
         return "You can't divide by 0, incompetent buffoon"
 
     #factor the diddly damn gcf
-     common_divisor = gcd(numer, denom)
-     (reduced_num, reduced_den) = (numer / common_divisor, denom / common_divisor)
-     if common_divisor == 1:
+    common_divisor = gcd(numer, denom)
+    (reduced_num, reduced_den) = (numer / common_divisor, denom / common_divisor)
+    if common_divisor == 1:
         return (numer, denom)
-     else:
+    else:
         # bunch of bs to make sure demon is negative
         if (reduced_den > denom):
             if (reduced_den * reduced_num < 0):
@@ -42,20 +42,20 @@ def simplify_fraction(numer, denom):
 
 #quadratic formula for factoring
 def quadraticFunction(a,b,c):
-     '''
-     the quadratic formula in a functon
-     
-     args:
-     a - as in the a value in the quadratic function - integer
-     b - b value in quadratic function
-     c - c value in quadratic function
+    '''
+    the quadratic formula in a functon
+    
+    args:
+    a - as in the a value in the quadratic function - integer
+    b - b value in quadratic function
+    c - c value in quadratic function
 
-     returns a formatted, factored version of the input
-     
-     ex.
-     assuming a = 1, b =2, c = 1, it returns (1x+1)(1x+1)
-     '''
-     if (b**2-4*a*c >= 0):
+    returns a formatted, factored version of the input
+    
+    ex.
+    assuming a = 1, b =2, c = 1, it returns (1x+1)(1x+1)
+    '''
+    if (b**2-4*a*c >= 0):
         x1 = (-b+sqrt(b**2-4*a*c))/(2*a)
         x2 = (-b-sqrt(b**2-4*a*c))/(2*a)
         mult1 = -x1 * a
@@ -76,23 +76,24 @@ def quadraticFunction(a,b,c):
             else:
                 sign2 = ""
             print("({}x{}{})({}x{}{})".format(int(num1),sign1,int(den1),int(num2),sign2,int(den2)))
-     else:
+    else:
         #if the part under the sqrt is negative, you have a solution with i
         print("You can't do this, it contains i.")
-     return
+    return
 
 #exit check function
 def exitCheck():
-     '''
-     checks to see if the user is done with what they are doing
-     
-     no args
+    '''
+    checks to see if the user is done with what they are doing
+    
+    no args
 
-     returns nothing
+    returns nothing
 
-     '''
-     exitCheckInt = input('Is that all? (y/n) ') 
-     if exitCheck == 'y':
-          stillcalculating = False
-     if exitCheck == 'n':
-          pass
+    '''
+    exitCheckInt = input('Is that all? (y/n) ') 
+    if exitCheck == 'y':
+        stillcalculating = False
+    if exitCheck == 'n':
+        pass
+
